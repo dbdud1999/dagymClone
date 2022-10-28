@@ -4,6 +4,8 @@ $(document).ready(function(){
         $(".header-menu-search-text > span").hide();
     });
     $(".header-menu-search-input > input").blur(function(){
-        $(".header-menu-search-text > span").show();
+        if($(this).val() == "" || $(this).val == null) {
+            $(".header-menu-search-text > span").show();
+        }
     });
 });
