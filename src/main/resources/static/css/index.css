@@ -1,0 +1,58 @@
+/* banner */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("../img/banner/benefit_pc.png");
+    background-size: 10000%;
+}
+.banner-content {
+    position: relative;
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+}
+.banner-main {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: 100%;
+}
+.banner-bundle {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.banner-unit {
+    width: 12px;
+    height: 12px;
+    background-color: #939598;
+    border-radius: 20px;
+}
+.banner-unit.active {
+    background-color: #ffc500;
+}
+.banner-unit:not(:last-child) {
+    margin-right: 10px;
+}
+.banner-unit:hover {
+    background-color: #ffc500;
+}
+.banner-button {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 80px;
+}
+.banner-btn {
+    margin-left: 5px;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.banner-btn:hover {
+    color: #939598 !important;
+}

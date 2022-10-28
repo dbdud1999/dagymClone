@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>다짐 - 운동할 땐, 다짐부터</title>
+    <link rel="stylesheet" href="css/common/common.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="http://localhost:8080/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".banner-unit").first().addClass("active");
+            $(".banner-main").attr("src", $(".banner-unit.active").attr("bgurl"));
+            $(".banner").css("background-image", "url(" + $(".banner-unit.active").attr("bgurl") + ")");
+            $(".banner-unit").on("click", function(){
+                // 버튼 색 변경
+                $(".banner-unit").removeClass("active");
+                $(this).addClass("active");
+                $(".banner-main").attr("src", $(".banner-unit.active").attr("bgurl"));
+                $(".banner").css("background-image", "url(" + $(".banner-unit.active").attr("bgurl") + ")");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header th:replace="common/header.html :: header"></header>
+    <div class="index-container">
+        <div class="index-content">
+            <div class="banner">
+                <div class="banner-content">
+                    <img th:attr="src=${banner[0]}" class="banner-main">
+                    <div class="banner-bundle">
+                        <div class="banner-unit" th:each="bannerUrl : ${banner}" th:attr="bgurl=${bannerUrl}"></div>
+                    </div>
+                    <div class="banner-button">
+                        <a href=""><div class="banner-btn" style="background-color:#5467f5;color:white">내 주변 운동시설 보기</div></a>
+                        <a href=""><div class="banner-btn" style="background-color:white;color:#5467f5">다짐 이용백서</div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

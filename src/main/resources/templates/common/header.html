@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header th:fragment="header" class="header">
+        <div class="header-content">
+            <div class="header-profile">
+                <div class="header-profile-bundle">
+                    <a href="" class="header-profile-unit">로그인</a>
+                    <a href="" class="header-profile-unit">회원가입</a>
+                    <a href="" class="header-profile-unit">회원권 만들기</a>
+                    <a href="" class="header-profile-unit">공지/이벤트</a>
+                    <a href="" class="header-profile-unit">고객센터</a>
+                </div>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-logo">
+                    <a href="/"><img src="img/dagym_blue.png" alt="로고 이미지"></a>
+                </div>
+                <div class="header-menu-search">
+                    <div class="header-menu-search-text">
+                        <span class="highlight">운동할 땐, 다짐부터!</span>
+                        <span class="gray">여기에서 지역/종목/센터명을 찾아보세요.</span>
+                    </div>
+                    <div class="header-menu-search-input">
+                        <input type="text" name="name">
+                    </div>
+                    <img src="img/header_menu/ic_search.png" class="header-menu-search-button">
+                </div>
+                <div class="header-menu-bundle">
+                    <a class="header-menu-unit">
+                        <div><img src="img/header_menu/ic_gym.png" alt="운동시설"></div>
+                        <span>운동시설</span>
+                    </a>
+                    <a class="header-menu-unit">
+                        <div style="width:32px;"><img src="img/header_menu/ic_trainer.png" alt="트레이너"></div>
+                        <span>트레이너</span>
+                    </a>
+                    <a class="header-menu-unit">
+                        <div><img src="img/header_menu/ic_map.png" alt="지도에서 찾기"></div>
+                        <span>지도에서 찾기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
