@@ -5,6 +5,8 @@
 body {
     font-family:'NanumSquare',san-serif;
     min-width: 1130px!important;
+    text-align: center;
+    margin: 0 auto;
 }
 a {
     color: #58595b;

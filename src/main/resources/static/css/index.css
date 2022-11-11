@@ -1,4 +1,4 @@
-/* banner */
+/*** banner ***/
 .banner {
     width: 100%;
     height: 500px;
@@ -55,4 +55,67 @@
 }
 .banner-btn:hover {
     color: #939598 !important;
+}
+
+/*** ad ***/
+.ad-top, .ad-bottom {
+    width: 1080px;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+.ad-top img, .ad-bottom img {
+    width: 100%;
+}
+
+/*** exhibition ***/
+.exhibition {
+    padding: 40px 0;
+}
+.exhibition > h2, .exhibition > p {
+    width: 1080px;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+}
+.exhibition > h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.exhibition > p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.exhibition-bundle {
+    width: 1080px;
+}
+.exhibition-unit {
+    display: inline-block;
+    width: 262px;
+    margin-right: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 50%);
+}
+.exhibition-img-container {
+    height: 170px;
+    width: 100%;
+}
+.exhibition-img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.exhibition-unit > span {
+    display: block;
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #58595b;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
 }

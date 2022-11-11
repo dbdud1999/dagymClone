@@ -38,6 +38,42 @@
                     </div>
                 </div>
             </div>
+            <div class="ad-top">
+                <a href=""><img th:attr="src=${adTop}"></a>
+            </div>
+            <div class="exhibition" style="background-image: linear-gradient(rgb(68, 88, 233) 50%, white 50%);">
+                <h2>다짐에서는 영상으로 센터를 볼 수 있다구!</h2>
+                <p>원하는 센터를 클릭해 보세요. 센터 소개영상이 있어요.</p>
+                <button class="exhibition-left-btn"><</button><button class="exhibition-right-btn">></button>
+                <div class="exhibition-bundle">
+                    <a th:href="@{/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition1}">
+                        <div class="exhibition-unit">
+                            <div class="exhibition-img-container">
+                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                            </div>
+                            <span th:text="${exhibition[1]}"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="exhibition" style="background-image: linear-gradient(rgb(131, 138, 176) 50%, white 50%);">
+                <h2>겨울맞이 선착순 우주최저가 할인 센터</h2>
+                <p>다짐 앱에서만 이 가격? 한번 구경해보세요</p>
+                <button class="exhibition-left-btn"><</button><button class="exhibition-right-btn">></button>
+                <div class="exhibition-bundle">
+                    <a th:href="@{/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition2}">
+                        <div class="exhibition-unit">
+                            <div class="exhibition-img-container">
+                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                            </div>
+                            <span th:text="${exhibition[1]}"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ad-bottom">
+                <a href=""><img th:attr="src=${adBottom}"></a>
+            </div>
         </div>
     </div>
 </body>

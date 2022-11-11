@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>다짐 - 운동할 땐, 다짐부터</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/common/common.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/gym/detail.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="http://localhost:8080/js/common.js"></script>
+</head>
+<body>
+    <header th:replace="common/header.html :: header"></header>
+    <div class="detail-container">
+        <div class="detail-content">
+            <div class="detail-title">
+                <div class="title-img">
+                    <img th:attr="src=${titleFile}">
+                </div>
+                <div class="title-info">
+                    <div class="title-info-title">
+                        <h2 th:text="${gymInfo.name}"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
