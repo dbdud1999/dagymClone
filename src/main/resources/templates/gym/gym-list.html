@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>다짐 - 운동할 땐, 다짐부터</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/common/common.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/gym/gym-list.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="http://localhost:8080/js/common.js"></script>
+    <!-- 카카오맵 API -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5f79fd0b5439dcf079bfa4e7eb43e856&libraries=services"></script>
+    <script>
+        $(document).ready(function(){
+            // 주소-좌표 변환 객체 생성
+            var geocoder = new kakao.maps.services.Geocoder();
+
+            loadCurrentLocation(function(lat, lon) {
+                // 주소 출력
+                geocoder.coord2Address(lon, lat, function(result, status) {
+                    if (status === kakao.maps.services.Status.OK) {
+                        $(".navi-loc > span").text(result[0].address.address_name);
+                    }
+                });
+
+                $.ajax({
+                    url: "/gym/gym-list-ajax",
+                    type: "POST",
+                    data: {
+                        'lat': lat,
+                        'lon': lon
+                    },
+                    success: function(data) {
+                        alert("success");
+                        console.log(data);
+                    }
+                });
+            });
+        });
+
+        function loadCurrentLocation(callback) {
+            const gymListUrl = new URL(window.location.href);
+
+            var lat = gymListUrl.searchParams.get("lat");
+            var lon = gymListUrl.searchParams.get("lon");
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition (function(position) {
+                    lat = position.coords.latitude;
+                    lon = position.coords.longitude;
+                });
+            }
+            else {
+                lat = 37.566826;
+                lon = 126.9786567;
+            }
+
+            setTimeout(function(){
+                callback(lat, lon);
+            }, 300);
+        }
+    </script>
+</head>
+<body>
+<header th:replace="common/header.html :: header"></header>
+<div class="gym-list-container">
+    <div class="gym-list-content">
+        <div class="navi">
+            <div class="navi-content">
+                <div class="navi-info">
+                    <div class="navi-category">
+                        <span><a href="/">홈</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a>내 주변 운동시설</a></span>
+                    </div>
+                    <div class="navi-loc">
+                        <img src="http://localhost:8080/img/location@3x.png">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="navi-setting">
+                    <span><a href="javascript:void(0)">재설정</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0)">위치지정</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

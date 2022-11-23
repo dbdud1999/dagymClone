@@ -13,7 +13,12 @@ public class Gym {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
     String name;
+
     String address;
+    String detailAddress;
+    double lat;
+    double lon;
+
     String phoneNum;
     String telephone;
     int fileUid;

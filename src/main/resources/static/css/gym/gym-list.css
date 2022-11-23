@@ -1,0 +1,30 @@
+/*** navi ***/
+.navi {
+    border-bottom: 1px solid #e8e9ea;
+}
+.navi-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 27px 0;
+    font-size: 14px;
+}
+.navi-category {
+    text-align: left;
+    color: #58595b;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.navi-loc {
+    text-align: left;
+    font-size: 12px;
+}
+.navi-loc > img {
+    width: 14px;
+    vertical-align: middle;
+}
+.navi-setting {
+    display: flex;
+    align-items: center;
+}
