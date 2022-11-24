@@ -66,21 +66,22 @@
     <div class="gym-list-content">
         <div class="navi">
             <div class="navi-content">
-                <div class="navi-info">
-                    <div class="navi-category">
-                        <span><a href="/">홈</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a>내 주변 운동시설</a></span>
+                    <div class="navi-info">
+                        <div class="navi-category">
+                            <span><a href="/">홈</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a>내 주변 운동시설</a></span>
+                        </div>
+                        <div class="navi-loc">
+                            <img src="http://localhost:8080/img/location@3x.png">
+                            <span></span>
+                        </div>
                     </div>
-                    <div class="navi-loc">
-                        <img src="http://localhost:8080/img/location@3x.png">
-                        <span></span>
+                    <div class="navi-setting">
+                        <span><a href="javascript:void(0)">재설정</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0)">위치지정</a></span>
                     </div>
-                </div>
-                <div class="navi-setting">
-                    <span><a href="javascript:void(0)">재설정</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0)">위치지정</a></span>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <footer th:replace="common/footer.html :: footer"></footer>
 </body>
 </html>
