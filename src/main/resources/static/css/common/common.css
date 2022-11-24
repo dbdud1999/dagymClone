@@ -1,6 +1,7 @@
 
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 @import url('header.css');
+@import url('footer.css');
 /* tag */
 body {
     font-family:'NanumSquare',san-serif;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="footer" class="footer-container">
+    <div class="footer-content">
+        <div class="footer-top">
+            <div class="footer-inquiry">
+                <p>제휴 및 서비스 이용 문의</p>
+                <img src="http://localhost:8080/img/tel.png">
+                <p>AM 10:00 - PM 07:00</p>
+                <p>토 일 공휴일 휴무</p>
+            </div>
+            <div class="footer-company">
+                <p>(주) 스톤아이</p>
+                <p>서울시 중구 을지로 50 1901호</p>
+                <p>대표 : 전혁진</p>
+                <p>사업자번호 : 669-81-00472</p>
+                <p>통신판매번호 : 제2019-서울중구-1751호</p>
+                <p>contact@stone-i.co.kr</p>
+            </div>
+            <div class="footer-download" th:with="ios=@{https://apps.apple.com/kr/app/id1195530295}, android=@{https://play.google.com/store/apps/details(id=kr.co.stone_i.www.dagym)}">
+                <p style="font-weight: bold">다짐 앱 다운로드</p>
+                <a th:href="${ios}" target='_blank'><p>아이폰</p></a>
+                <a th:href="${android}" target='_blank'><p>안드로이드</p></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="javascript:void(0)">이용약관</a>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">위치정보이용약관</a>
+            <a href="javascript:void(0)">센터등록요청하기</a>
+            <a href="javascript:void(0)">문의하기</a>
+            <a href="javascript:void(0)"><img src="http://localhost:8080/img/footer_icon/link_naverblog.png"></a>
+            <a href="javascript:void(0)"><img src="http://localhost:8080/img/footer_icon/link_facebook.png"></a>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright ⓒ Stone-I Co., Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

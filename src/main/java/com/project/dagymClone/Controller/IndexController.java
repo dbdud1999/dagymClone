@@ -31,4 +31,9 @@ public class IndexController {
 
         return "index";
     }
+
+    @GetMapping("/trainer")
+    public String trainerIndex(Model model){
+        return "trainer/index";
+    }
 }

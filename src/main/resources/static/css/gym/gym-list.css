@@ -19,10 +19,12 @@
 .navi-loc {
     text-align: left;
     font-size: 12px;
+    line-height: 14px;
 }
 .navi-loc > img {
     width: 14px;
     vertical-align: middle;
+    margin-right: 6px;
 }
 .navi-setting {
     display: flex;
