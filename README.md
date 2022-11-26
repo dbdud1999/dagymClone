@@ -31,7 +31,10 @@
 [`/gym/detail`](http://localhost:8080/gym/detail)&nbsp;&nbsp;:&nbsp;운동시설 상세보기
 
 #### POLICY
-[`/policy/service`](http://localhost:8080/policy/service)&nbsp;&nbsp;:&nbsp;운동시설 리스트 <br>
+[`/policy/service`](http://localhost:8080/policy/service)&nbsp;&nbsp;:&nbsp;이용약관 <br>
+[`/policy/privacy`](http://localhost:8080/policy/privacy)&nbsp;&nbsp;:&nbsp;개인정보 처리방침 <br>
+[`/policy/location-based-service`](http://localhost:8080/policy/location-based-service)&nbsp;&nbsp;:&nbsp;위치정보 이용약관
+
 ### Trainer Interface
 #### INDEX
 [`/trainer`](http://localhost:8080/trainer)&nbsp;&nbsp;:&nbsp;트레이너 메인 화면
