@@ -25,9 +25,13 @@
 ### User Interface
 #### INDEX
 [`/`](http://localhost:8080/)&nbsp;&nbsp;:&nbsp;메인 화면
+
 #### GYM
 [`/gym/gym-list`](http://localhost:8080/gym/gym-list)&nbsp;&nbsp;:&nbsp;운동시설 리스트 <br>
 [`/gym/detail`](http://localhost:8080/gym/detail)&nbsp;&nbsp;:&nbsp;운동시설 상세보기
+
+#### POLICY
+[`/policy/service`](http://localhost:8080/policy/service)&nbsp;&nbsp;:&nbsp;운동시설 리스트 <br>
 ### Trainer Interface
 #### INDEX
 [`/trainer`](http://localhost:8080/trainer)&nbsp;&nbsp;:&nbsp;트레이너 메인 화면
