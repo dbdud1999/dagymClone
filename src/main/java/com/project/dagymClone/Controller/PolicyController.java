@@ -16,4 +16,9 @@ public class PolicyController {
     public String privacy(){
         return "policy/privacy";
     }
+
+    @GetMapping("location-based-service")
+    public String locationBasedService(){
+        return "policy/location-based-service";
+    }
 }
