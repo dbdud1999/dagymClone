@@ -24,20 +24,20 @@
 ## 💫 사이트 구조
 ### User Interface
 #### INDEX
-[`/`](http://localhost:8080/)&nbsp;&nbsp;:&nbsp;메인 화면
+[`/user/`](http://localhost:8080/user/)&nbsp;&nbsp;:&nbsp;메인 화면
 
 #### GYM
-[`/gym/gym-list`](http://localhost:8080/gym/gym-list)&nbsp;&nbsp;:&nbsp;운동시설 리스트 <br>
-[`/gym/detail`](http://localhost:8080/gym/detail)&nbsp;&nbsp;:&nbsp;운동시설 상세보기
+[`/user/gym/gym-list`](http://localhost:8080/user/gym/gym-list)&nbsp;&nbsp;:&nbsp;운동시설 리스트 <br>
+[`/user/gym/detail`](http://localhost:8080/user/gym/detail)&nbsp;&nbsp;:&nbsp;운동시설 상세보기
 
 #### POLICY
-[`/policy/service`](http://localhost:8080/policy/service)&nbsp;&nbsp;:&nbsp;이용약관 <br>
-[`/policy/privacy`](http://localhost:8080/policy/privacy)&nbsp;&nbsp;:&nbsp;개인정보 처리방침 <br>
-[`/policy/location-based-service`](http://localhost:8080/policy/location-based-service)&nbsp;&nbsp;:&nbsp;위치정보 이용약관
+[`/user/policy/service`](http://localhost:8080/user/policy/service)&nbsp;&nbsp;:&nbsp;이용약관 <br>
+[`/user/policy/privacy`](http://localhost:8080/user/policy/privacy)&nbsp;&nbsp;:&nbsp;개인정보 처리방침 <br>
+[`/user/policy/location-based-service`](http://localhost:8080/user/policy/location-based-service)&nbsp;&nbsp;:&nbsp;위치정보 이용약관
 
-### Trainer Interface
+### Manager Interface
 #### INDEX
-[`/manager`](http://localhost:8080/manager)&nbsp;&nbsp;:&nbsp;트레이너 메인 화면
+[`/manager/dashboard`](http://localhost:8080/manager/dashboard)&nbsp;&nbsp;:&nbsp;대시보드
 ### Administrator Interface
 
 ## 🛠️ 구현 기능
@@ -53,7 +53,7 @@
 - ⬜ 지도 내 운동시설 표시
 - ⬜ 회원권 결제
 
-### Trainer Interface
+### Manager Interface
 - ⬜ 로그인 및 회원가입
 - ⬜ 운동시설 등록
 - ⬜ 회원권 등록 및 변경
