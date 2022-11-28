@@ -1,19 +1,22 @@
-package com.project.dagymClone.Dto;
+package com.project.dagymClone.Entity;
 
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name="policy")
+@Table(name="ad")
 @Data
-public class Policy {
+public class Ad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    String type;  // "service" : 약관, "privacy" : 개인정보 처리방침, "lbs" : 위치정보 이용 약관
-    String contents;
+    @ColumnDefault("0")
+    int fileUid;
+    @ColumnDefault("0")
+    boolean isTop;
 
     Timestamp regDate;
     Timestamp updateDate;

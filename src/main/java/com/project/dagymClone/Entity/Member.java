@@ -1,14 +1,15 @@
-package com.project.dagymClone.Dto;
+package com.project.dagymClone.Entity;
 
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name="manager")
+@Table(name="member")
 @Data
-public class Manager {
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
@@ -17,10 +18,10 @@ public class Manager {
 
     // 마이페이지 정보
     String name;
+    String nickname;
     String phoneNum;
-    int profile_img;
-
-    String gymList;
+    @ColumnDefault("0")
+    int profileImg;
 
     Timestamp regDate;
     Timestamp updateDate;

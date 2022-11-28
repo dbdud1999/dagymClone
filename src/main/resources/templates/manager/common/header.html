@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
-<header th:fragment="header" class="header">
+<header th:fragment="header" class="header-container">
     <div class="header-content">
-        <div class="header-left">aaa</div>
-        <div class="header-right">bbb</div>
+
+        <!-- 왼편 -->
+        <div class="header-left">
+            <div class="header-logo">
+                <a href="/manager/"><img src="http://localhost:8080/img/dagym_manager.svg" alt="로고 이미지"></a>
+            </div>
+            <div class="header-search">
+                <img src="http://localhost:8080/img/header_menu/ic_search.png" onclick="javascript:headerSubmit()">
+                <form action="http://localhost:8080/manager/member" id="header-search-form" onsubmit="return headerSubmit()">
+                    <input type="text" name="search" class="header-input" placeholder="회원 이름, 연락처 등으로 검색해 주세요.">
+                </form>
+            </div>
+        </div>
+
+        <!-- 오른편 -->
+        <div class="header-right">
+            <div class="header-user">
+                <a href="javascript:void(0)"><img src="http://localhost:8080/img/header_menu/plus_icon.png"> 회원 등록</a>
+                <a href="javascript:void(0)"><img src="http://localhost:8080/img/header_menu/plus_icon.png"> 일일입장권</a>
+            </div>
+            <div class="header-profile" topbar="close">
+                <div class="header-profile-img">
+                    <img th:if="${#strings.isEmpty(profileImg)}" src="http://localhost:8080/img/header_menu/default_profile.png" alt="프로필 사진">
+                    <img th:unless="${#strings.isEmpty(profileImg)}" th:attr="src=${profileImg}" alt="프로필 사진">
+                </div>
+                <div class="header-profile-info">
+                    <p class="profile-name"><span th:text="${managerInfo.managerName}"></span><span th:unless="${#strings.isEmpty(managerInfo.position)}" th:text="${managerInfo.position}"></span></p>
+                    <p class="profile-gym" th:unless="${#strings.isEmpty(gymInfo)}"><span class="gym" th:text="${gymInfo}"></span></p>
+                </div>
+                <div class="header-profile-arrow">
+                    <img src="http://localhost:8080/img/header_menu/downward-arrow.png" alt="화살표">
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 </body>

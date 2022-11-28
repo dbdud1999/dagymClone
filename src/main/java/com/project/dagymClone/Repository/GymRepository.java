@@ -1,6 +1,6 @@
 package com.project.dagymClone.Repository;
 
-import com.project.dagymClone.Dto.Gym;
+import com.project.dagymClone.Entity.Gym;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.project.dagymClone.Dto;
+package com.project.dagymClone.Entity;
 
 import lombok.Data;
 
@@ -6,15 +6,13 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Data
-@Table(name="banner")
+@Table(name="bbs_file")
 @Entity
-public class Banner {
+public class BbsFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    int fileUid;
-    int sort;   // 정렬 순서
+    String fileUrl;
 
     Timestamp regDate;
-    Timestamp updateDate;
 }

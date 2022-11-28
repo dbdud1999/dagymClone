@@ -1,7 +1,7 @@
 package com.project.dagymClone.Service;
 
-import com.project.dagymClone.Dto.BbsFile;
-import com.project.dagymClone.Dto.Gym;
+import com.project.dagymClone.Entity.BbsFile;
+import com.project.dagymClone.Entity.Gym;
 import com.project.dagymClone.Repository.BbsFileRepository;
 import com.project.dagymClone.Repository.GymRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,10 @@ public class UserGymService {
 
     public String getGymTitleFileUrl(int uid) {
         Gym gym = gymRepository.findByUid(uid);
-        BbsFile gymTitleFile = bbsFileRepository.findByUid(gym.getFileUid());
+
+        BbsFile gymTitleFile = new BbsFile();
+        if(gym.getFileUid() > 0)
+            gymTitleFile = bbsFileRepository.findByUid(gym.getFileUid());
 
         return gymTitleFile.getFileUrl();
     }

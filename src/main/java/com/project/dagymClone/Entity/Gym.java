@@ -1,6 +1,7 @@
-package com.project.dagymClone.Dto;
+package com.project.dagymClone.Entity;
 
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -21,6 +22,7 @@ public class Gym {
 
     String phoneNum;
     String telephone;
+    @ColumnDefault("0")
     int fileUid;
     String fileList;
 

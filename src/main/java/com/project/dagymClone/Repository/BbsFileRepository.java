@@ -1,6 +1,6 @@
 package com.project.dagymClone.Repository;
 
-import com.project.dagymClone.Dto.BbsFile;
+import com.project.dagymClone.Entity.BbsFile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

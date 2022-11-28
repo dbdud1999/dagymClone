@@ -45,7 +45,7 @@
 }
 .header-menu-search-text {
     position: absolute;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 60px;
     pointer-events: none;

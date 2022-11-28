@@ -1,18 +1,21 @@
-package com.project.dagymClone.Dto;
+package com.project.dagymClone.Entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Data
-@Table(name="bbs_file")
 @Entity
-public class BbsFile {
+@Table(name="manager")
+@Data
+public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    String fileUrl;
+    String accountId;
+    int position;
+    String gymList;
 
     Timestamp regDate;
+    Timestamp updateDate;
 }

@@ -1,9 +1,9 @@
 package com.project.dagymClone.Service;
 
-import com.project.dagymClone.Dto.Ad;
-import com.project.dagymClone.Dto.Banner;
-import com.project.dagymClone.Dto.BbsFile;
-import com.project.dagymClone.Dto.Gym;
+import com.project.dagymClone.Entity.Ad;
+import com.project.dagymClone.Entity.Banner;
+import com.project.dagymClone.Entity.BbsFile;
+import com.project.dagymClone.Entity.Gym;
 import com.project.dagymClone.Repository.AdRepository;
 import com.project.dagymClone.Repository.BannerRepository;
 import com.project.dagymClone.Repository.BbsFileRepository;
