@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>다짐 - 운동할 땐, 다짐부터</title>
-    <link rel="stylesheet" href="http://localhost:8080/css/common/common.css" type="text/css">
-    <link rel="stylesheet" href="http://localhost:8080/css/policy/policy.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/user/common/common.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/user/policy/policy.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script language="javascript" type="text/javascript" src="http://localhost:8080/js/common.js"></script>
 </head>
 <body>
-<header th:replace="common/header.html :: header"></header>
+<header th:replace="/user/common/header.html :: header"></header>
 <div class="policy-container">
     <h1>개인정보 처리방침</h1>
     <div class="policy-content">
@@ -323,6 +323,6 @@
         </div>
     </div>
 </div>
-<footer th:replace="common/footer.html :: footer"></footer>
+<footer th:replace="/user/common/footer.html :: footer"></footer>
 </body>
 </html>

@@ -5,20 +5,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("policy")
-public class PolicyController {
+@RequestMapping("user/policy")
+public class UserPolicyController {
     @GetMapping("service")
     public String service(){
-        return "policy/service";
+        return "user/policy/service";
     }
 
     @GetMapping("privacy")
     public String privacy(){
-        return "policy/privacy";
+        return "user/policy/privacy";
     }
 
     @GetMapping("location-based-service")
     public String locationBasedService(){
-        return "policy/location-based-service";
+        return "user/policy/location-based-service";
     }
 }

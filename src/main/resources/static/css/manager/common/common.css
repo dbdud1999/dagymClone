@@ -1,0 +1,15 @@
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('header.css');
+/*** tag ***/
+body {
+    font-family:'NanumSquare',san-serif;
+    min-width: 1130px!important;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+input:focus {
+    outline: none;
+}

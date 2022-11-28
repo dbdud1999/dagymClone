@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>다짐 - 운동할 땐, 다짐부터</title>
-    <link rel="stylesheet" href="http://localhost:8080/css/common/common.css" type="text/css">
-    <link rel="stylesheet" href="http://localhost:8080/css/gym/gym-list.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/user/common/common.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/css/user/gym/gym-list.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script language="javascript" type="text/javascript" src="http://localhost:8080/js/common.js"></script>
+    <script language="javascript" type="text/javascript" src="http://localhost:8080/js/user/common.js"></script>
     <!-- 카카오맵 API -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5f79fd0b5439dcf079bfa4e7eb43e856&libraries=services"></script>
     <script>
@@ -61,7 +61,7 @@
     </script>
 </head>
 <body>
-<header th:replace="common/header.html :: header"></header>
+<header th:replace="/user/common/header.html :: header"></header>
 <div class="gym-list-container">
     <div class="gym-list-content">
         <div class="navi">
@@ -82,6 +82,6 @@
             </div>
         </div>
     </div>
-    <footer th:replace="common/footer.html :: footer"></footer>
+    <footer th:replace="/user/common/footer.html :: footer"></footer>
 </body>
 </html>

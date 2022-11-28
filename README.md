@@ -37,7 +37,7 @@
 
 ### Trainer Interface
 #### INDEX
-[`/trainer`](http://localhost:8080/trainer)&nbsp;&nbsp;:&nbsp;트레이너 메인 화면
+[`/manager`](http://localhost:8080/manager)&nbsp;&nbsp;:&nbsp;트레이너 메인 화면
 ### Administrator Interface
 
 ## 🛠️ 구현 기능

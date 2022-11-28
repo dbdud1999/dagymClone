@@ -1,6 +1,6 @@
 package com.project.dagymClone.Controller;
 
-import com.project.dagymClone.Service.GymService;
+import com.project.dagymClone.Service.UserGymService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,30 +9,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @Controller
-@RequestMapping("gym")
-public class GymController {
+@RequestMapping("user/gym")
+public class UserGymController {
 
     @Autowired
-    GymService gymService;
+    UserGymService userGymService;
 
     @GetMapping("gym-list")
     public String gymList() {
-        return "gym/gym-list";
+        return "user/gym/gym-list";
     }
 
     @ResponseBody
     @PostMapping("gym-list-ajax")
     public HashMap<String, String> gymListAjax(@RequestParam("lat") String lat, @RequestParam("lon") String lon) {
         HashMap<String, String> location = new HashMap<>();
-        location.put("address", gymService.currentLocationInfo(Double.parseDouble(lat), Double.parseDouble(lon)));
+        location.put("address", userGymService.currentLocationInfo(Double.parseDouble(lat), Double.parseDouble(lon)));
         return location;
     }
 
     @GetMapping("detail")
     public String detail(Model model, @RequestParam("uid") int uid) {
-        model.addAttribute("gymInfo", gymService.getGymInfo(uid));
-        model.addAttribute("titleFile", gymService.getGymTitleFileUrl(uid));
+        model.addAttribute("gymInfo", userGymService.getGymInfo(uid));
+        model.addAttribute("titleFile", userGymService.getGymTitleFileUrl(uid));
 
-        return "gym/detail";
+        return "user/gym/detail";
     }
 }

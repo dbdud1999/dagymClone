@@ -6,14 +6,21 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name="policy")
+@Table(name="manager")
 @Data
-public class Policy {
+public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    String type;  // "service" : 약관, "privacy" : 개인정보 처리방침, "lbs" : 위치정보 이용 약관
-    String contents;
+    String accountId;
+    String password;
+
+    // 마이페이지 정보
+    String name;
+    String phoneNum;
+    int profile_img;
+
+    String gymList;
 
     Timestamp regDate;
     Timestamp updateDate;

@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Service
-public class IndexService {
+public class UserIndexService {
 
     @Autowired
     BannerRepository bannerRepository;
