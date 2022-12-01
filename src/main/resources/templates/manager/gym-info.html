@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>다짐 - 매니저</title>
-  <link rel="stylesheet" href="http://localhost:8080/css/manager/common/common.css" type="text/css">
-  <!--<link rel="stylesheet" href="http://localhost:8080/css/manager/gym-info.css" type="text/css">-->
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script language="javascript" type="text/javascript" src="http://localhost:8080/js/manager/common.js"></script>
+	<meta charset="UTF-8">
+	<title>다짐 - 매니저</title>
+	<link rel="stylesheet" href="http://localhost:8080/css/manager/common/common.css" type="text/css">
+	<link rel="stylesheet" href="http://localhost:8080/css/manager/gym-info.css" type="text/css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script language="javascript" type="text/javascript" src="http://localhost:8080/js/manager/common.js"></script>
 </head>
 <body>
 <header th:replace="/manager/common/header.html :: header"></header>
 <div class="gym-info-container">
-  <div class="gym-info-content">
-  </div>
+	<div class="gym-info-content">
+		<h3 class="gym-info-title">운동시설 목록</h3>
+		<div class="gym-info-list">
+			<div th:if="${#strings.isEmpty(gymList)}" class="no-gym-list">
+				<img src="http://localhost:8080/img/manager/no-gym-8a728018109b1b40df6f060fe613a99c.webp">
+				<p>현재 등록했거나 초대된 시설이 없습니다.</p>
+				<p>운영중인 시설을 추가하거나 근무 중인 시설이 있다면</p>
+				<p>구성원 초대 요청을 해보세요!</p>
+			</div>
+			<a href="javascript:void(0)">
+				<div class="gym-add-btn">
+					운동시설 추가하기
+				</div>
+			</a>
+		</div>
+
+	</div>
 </div>
 </body>
 </html>

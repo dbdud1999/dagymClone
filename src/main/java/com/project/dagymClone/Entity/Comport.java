@@ -10,29 +10,21 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name="member")
-public class Member {
+@Table(name = "comport")
+public class Comport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    @Column(unique = true)
     @NotNull
-    String accountId;
-    @NotNull
-    String password;
-
-    // 마이페이지 정보
-    @NotNull
+    @ColumnDefault("''")
     String name;
-    @NotNull
-    @ColumnDefault("''")
-    String nickname;
-    @NotNull
-    @ColumnDefault("''")
-    String phoneNum;
     @OneToOne
-    FileGroup profileImg;
+    FileGroup img;
 
+
+    @NotNull
+    @ColumnDefault("0")
+    boolean onService;
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     Date regDate;

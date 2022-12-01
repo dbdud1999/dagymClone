@@ -10,5 +10,5 @@ import java.util.HashMap;
 
 @Repository
 public interface ManagerRepository extends JpaRepository<Manager, Integer> {
-    public Manager findByAccountId(String accountId);
+    public Manager findByMember(String member);
 }

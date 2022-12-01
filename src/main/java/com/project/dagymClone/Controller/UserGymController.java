@@ -31,7 +31,6 @@ public class UserGymController {
     @GetMapping("detail")
     public String detail(Model model, @RequestParam("uid") int uid) {
         model.addAttribute("gymInfo", userGymService.getGymInfo(uid));
-        model.addAttribute("titleFile", userGymService.getGymTitleFileUrl(uid));
 
         return "user/gym/detail";
     }

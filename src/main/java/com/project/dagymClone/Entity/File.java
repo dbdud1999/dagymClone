@@ -10,33 +10,27 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name="member")
-public class Member {
+@Table(name="file")
+public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    @Column(unique = true)
     @NotNull
-    String accountId;
+    @ColumnDefault("0")
+    int sequence;
     @NotNull
-    String password;
+    String originalName;  // 서버 저장명은 file_{uid}.확장자명
+    @NotNull
+    String extension;
+    @NotNull
+    long fileSize;
 
-    // 마이페이지 정보
     @NotNull
-    String name;
-    @NotNull
-    @ColumnDefault("''")
-    String nickname;
-    @NotNull
-    @ColumnDefault("''")
-    String phoneNum;
-    @OneToOne
-    FileGroup profileImg;
-
+    @ColumnDefault("0")
+    boolean deleted;
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     Date regDate;
-    @NotNull
     @Temporal(TemporalType.TIMESTAMP)
-    Date updateDate;
+    Date deleteDate;
 }

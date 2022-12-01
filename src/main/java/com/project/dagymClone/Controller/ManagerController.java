@@ -25,6 +25,10 @@ public class ManagerController {
 
         return "manager/gym-info";
     }
+    @GetMapping("create-gym")
+    public String createGym() {
+        return "manager/create-gym";
+    }
     @GetMapping("dashboard")
     public String dashboard(){
         return "manager/dashboard";

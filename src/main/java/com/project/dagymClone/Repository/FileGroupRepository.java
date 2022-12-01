@@ -1,10 +1,10 @@
 package com.project.dagymClone.Repository;
 
-import com.project.dagymClone.Entity.BbsFile;
+import com.project.dagymClone.Entity.FileGroup;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BbsFileRepository extends JpaRepository<BbsFile, Integer> {
-    public BbsFile findByUid(int uid);
+public interface FileGroupRepository extends JpaRepository<FileGroup, Integer> {
+    public FileGroup findByUid(int uid);
 }

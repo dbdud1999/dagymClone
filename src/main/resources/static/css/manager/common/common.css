@@ -20,7 +20,7 @@ input {
 input:focus {
     outline: none;
 }
-body > div {
+body > div > div {
     background-color: white;
 }
 form, img {

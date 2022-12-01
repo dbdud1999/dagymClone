@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface BannerRepository extends JpaRepository<Banner, Integer> {
-    public List<Banner> findAllByOrderBySortAsc();
+    public List<Banner> findAllByOrderBySequenceAsc();
 }

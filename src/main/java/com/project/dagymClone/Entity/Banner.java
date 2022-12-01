@@ -1,22 +1,52 @@
 package com.project.dagymClone.Entity;
 
+import com.sun.istack.NotNull;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
-@Data
-@Table(name="banner")
 @Entity
+@Table(name="banner")
+@Data
+@NoArgsConstructor
 public class Banner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
+    @OneToOne
+    FileGroup img;
+    @NotNull
     @ColumnDefault("0")
-    int fileUid;
-    int sort;   // 정렬 순서
+    int sequence;
 
-    Timestamp regDate;
-    Timestamp updateDate;
+
+    @NotNull
+    @ColumnDefault("0")
+    boolean onService;
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    Date regDate;
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    Date updateDate;
+
+    @Builder
+    public Banner (int sequence, boolean onService, Date regDate, Date updateDate) {
+        this.sequence = sequence;
+        this.onService = onService;
+        this.regDate = regDate;
+        this.updateDate = updateDate;
+    }
+    @Builder
+    public Banner (FileGroup img, int sequence, boolean onService, Date regDate, Date updateDate) {
+        this.img = img;
+        this.sequence = sequence;
+        this.onService = onService;
+        this.regDate = regDate;
+        this.updateDate = updateDate;
+    }
 }

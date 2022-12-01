@@ -26,7 +26,7 @@
     <header th:replace="/user/common/header.html :: header"></header>
     <div class="index-container">
         <div class="index-content">
-            <div class="banner">
+            <div class="banner" th:if="${#strings.isEmpty(bannerList)}">
                 <div class="banner-content">
                     <img th:attr="src=${banner[0]}" class="banner-main">
                     <div class="banner-bundle">
@@ -46,24 +46,24 @@
                 <p>원하는 센터를 클릭해 보세요. 센터 소개영상이 있어요.</p>
                 <button class="exhibition-left-btn"><</button><button class="exhibition-right-btn">></button>
                 <div class="exhibition-bundle">
-                    <a th:href="@{/user/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition1}">
+                    <!--<a th:href="@{/user/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition1}">-->
                         <div class="exhibition-unit">
                             <div class="exhibition-img-container">
-                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                                <!--<img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">-->
                             </div>
-                            <span th:text="${exhibition[1]}"></span>
+                            <!--<span th:text="${exhibition[1]}"></span>-->
                         </div>
                         <div class="exhibition-unit">
                             <div class="exhibition-img-container">
-                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                                <!--<img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">-->
                             </div>
-                            <span th:text="${exhibition[1]}"></span>
+                            <!--<span th:text="${exhibition[1]}"></span>-->
                         </div>
                         <div class="exhibition-unit">
                             <div class="exhibition-img-container">
-                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                                <!--<img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">-->
                             </div>
-                            <span th:text="${exhibition[1]}"></span>
+                            <!--<span th:text="${exhibition[1]}"></span>-->
                         </div>
                     </a>
                 </div>
@@ -73,18 +73,18 @@
                 <p>다짐 앱에서만 이 가격? 한번 구경해보세요</p>
                 <button class="exhibition-left-btn"><</button><button class="exhibition-right-btn">></button>
                 <div class="exhibition-bundle">
-                    <a th:href="@{/user/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition2}">
+                    <!--<a th:href="@{/user/gym/detail(uid=${exhibition[0]})}" th:each="exhibition : ${exhibition2}">-->
                         <div class="exhibition-unit">
                             <div class="exhibition-img-container">
-                                <img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">
+                                <!--<img th:attr="src=${exhibition[2]},alt=${exhibition[1]}">-->
                             </div>
-                            <span th:text="${exhibition[1]}"></span>
+                            <!--<span th:text="${exhibition[1]}"></span>-->
                         </div>
                     </a>
                 </div>
             </div>
             <div class="ad-bottom">
-                <a href=""><img th:attr="src=${adBottom}"></a>
+                <!--<a href=""><img th:attr="src=${adBottom}"></a>-->
             </div>
         </div>
     </div>

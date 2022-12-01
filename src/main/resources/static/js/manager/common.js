@@ -4,17 +4,30 @@ $(document).ready(function(){
         $(".header-search").remove();
         $(".header-user").remove();
     }
-    $(".header-profile").click(function(){
-        console.log($(this).attr("topbar"));
+    $("body").click(function(e){
+        if(($(e.target).parents('.header-profile').length > 0 || $(e.target).hasClass('header-profile')) && $('.header-profile').attr("topbar") == "close") {
+            $(".header-profile-arrow > img").attr("src", "http://localhost:8080/img/header_menu/upward-arrow.png");
+            $('.header-profile').attr("topbar", "open");
+            showTopBar();
+        }
+        else if($('.header-profile').attr("topbar") == "open") {
+            $(".header-profile-arrow > img").attr("src", "http://localhost:8080/img/header_menu/downward-arrow.png");
+            $('.header-profile').attr("topbar", "close");
+            closeTopBar();
+        }
+    });
+    /*$(".header-profile").click(function(){
         if($(this).attr("topbar") == "open") {
+            $(".header-profile-arrow > img").attr("src", "http://localhost:8080/img/header_menu/downward-arrow.png");
             $(this).attr("topbar", "close");
             closeTopBar();
         }
         else if($(this).attr("topbar") == "close") {
+            $(".header-profile-arrow > img").attr("src", "http://localhost:8080/img/header_menu/upward-arrow.png");
             $(this).attr("topbar", "open");
             showTopBar();
         }
-    });
+    });*/
 });
 
 // header.js
@@ -30,11 +43,13 @@ function showTopBar() {
     let topBar = "<div class=\"top-bar\">";
 
     //시설 변경
-    topBar += "<a href=\"javascript:void(0)\"><div class=\"top-bar-li change-gym\">";
-    topBar += "시설 변경";
-    topBar += "</div></a>";
+    if($(".profile-gym").length){
+        topBar += "<a href=\"/manager/\"><div class=\"top-bar-li change-gym\">";
+        topBar += "시설 변경";
+        topBar += "</div></a>";
+    }
     //내 정보 설정
-    topBar += "<a href=\"javascript:void(0)\"><div class=\"top-bar-li my-info\">";
+    topBar += "<a href=\"/manager/mypage\"><div class=\"top-bar-li my-info\">";
     topBar += "내 정보 설정";
     topBar += "</div></a>";
     // 로그아웃

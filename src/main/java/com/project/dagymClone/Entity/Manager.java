@@ -1,21 +1,33 @@
 package com.project.dagymClone.Entity;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
+import org.hibernate.annotations.Comment;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name="manager")
 @Data
+@Table(name="manager")
 public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int uid;
-    String accountId;
-    int position;
-    String gymList;
+    @OneToOne
+    @JoinColumn(name = "account_id")
+    Member member;
+    @ManyToOne
+    Position position;
+    @OneToMany
+    List<Gym> gyms = new ArrayList<>();
 
-    Timestamp regDate;
-    Timestamp updateDate;
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    Date regDate;
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    Date updateDate;
 }

@@ -1,0 +1,41 @@
+.gym-info-content {
+    width: 1200px;
+    height: 100%;
+    min-height: calc(100vh - 82px);
+    margin: 0 auto;
+    text-align: center;
+}
+.gym-info-title {
+    font-size: 40px;
+    padding: 60px 0 40px 0;
+    margin: 0;
+    color: #58595B;
+    font-weight: 800;
+}
+.gym-info-list {
+    width: 420px;
+    margin: 0 auto;
+}
+/*** no gym list ***/
+.no-gym-list {
+    padding-bottom: 40px;
+}
+.no-gym-list > img {
+    width: 318px;
+    padding: 40px 0 20px 0;
+}
+.no-gym-list > p {
+    margin: 6px;
+}
+.gym-add-btn {
+    width: 100%;
+    background: linear-gradient(0.25turn, #7F8EFB, #5467F5);
+    color: white;
+    border-radius: 8px;
+    padding: 14px 0;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.gym-add-btn:hover {
+    opacity: 0.7;
+}
