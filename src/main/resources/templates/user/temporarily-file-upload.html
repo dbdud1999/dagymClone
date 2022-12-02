@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>파일 업로드</title>
+</head>
+<body>
+	<form action="/file-upload-process" method="post" enctype="multipart/form-data">
+		<p>경로:<input type="text" name="path"></p>
+		<p>단일파일: <input type="file" name="file"></p>
+		<p>다중파일: <input multiple="multiple" type="file" name="multifile"></p>
+		<input type="submit">
+	<form>
+</body>
+</html>

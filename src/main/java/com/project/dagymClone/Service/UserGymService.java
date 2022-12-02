@@ -1,6 +1,5 @@
 package com.project.dagymClone.Service;
 
-import com.project.dagymClone.Entity.File;
 import com.project.dagymClone.Entity.Gym;
 import com.project.dagymClone.Repository.GymRepository;
 import org.springframework.beans.factory.annotation.Autowired;

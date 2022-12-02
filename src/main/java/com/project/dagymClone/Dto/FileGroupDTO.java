@@ -1,6 +1,6 @@
 package com.project.dagymClone.Dto;
 
-import com.project.dagymClone.Entity.File;
+import com.project.dagymClone.Entity.FileUnit;
 import com.project.dagymClone.Entity.FileGroup;
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class FileGroupDTO {
     int uid;
     String path;
-    List<File> files = new ArrayList<>();
+    List<FileUnit> files = new ArrayList<>();
 
     public FileGroupDTO (FileGroup fileGroup) {
         this.uid = fileGroup.getUid();

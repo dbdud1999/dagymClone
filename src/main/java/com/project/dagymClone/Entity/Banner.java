@@ -1,6 +1,7 @@
 package com.project.dagymClone.Entity;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Table(name="banner")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Banner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
